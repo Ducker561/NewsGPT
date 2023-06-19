@@ -2,13 +2,9 @@ import openai
 import time
 from get_news import get_top_news
 
-<<<<<<< HEAD
-=======
-openai.api_key = "***"
->>>>>>> e25590165641979172de7cf245643198770fe36f
 
 def get_res(news, question):
-    openai.api_key = "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"
+    openai.api_key = "***"  # Your openai key
     content = "I will give you some news about an event. Please read the news I give and answer my question based on these news. News are these:{}. My question is {}. If the news I give do not contain these infomation, you just say 'Unknown'. Please do not output any other content or explanations, just answer the question is OK.".format(news, question)
     completion = openai.ChatCompletion.create(
         model="gpt-3.5-turbo-0613",
@@ -50,5 +46,3 @@ def run(keyword, question):
 
     if retry_count == max_retries:
         print("Reach the max retries... Seems something wrong.")
-
-

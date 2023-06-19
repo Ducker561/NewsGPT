@@ -35,7 +35,7 @@ if __name__ == '__main__':
     need_token = []
     for _info in ner_info:
         need_token.append(_info[1])
-    HanLP = HanLPClient('https://www.hanlp.com/api', auth='MjY0OEBiYnMuaGFubHAuY29tOlVtdWNESGdDWjJrbFZEaEE=', language='zh')
+    HanLP = HanLPClient('https://www.hanlp.com/api', auth='***', language='zh') # auth=APIKEY or auth=None
     hanlp_result = HanLP(question, tasks='pos')
     tok = hanlp_result['tok/fine'][0]
     pos = hanlp_result['pos/ctb'][0]
