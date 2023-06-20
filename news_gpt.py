@@ -5,7 +5,7 @@ from get_news import get_top_news
 
 def get_res(news, question):
     openai.api_key = "***"  # Your openai key
-    content = "I will give you some news about an event. Please read the news I give and answer my question based on these news. News are these:{}. My question is {}. If the news I give do not contain these infomation, you just say 'Unknown'. Please do not output any other content or explanations, just answer the question is OK.".format(news, question)
+    content = "I will give you some news about an event. Please read the news I give and answer my question based on these news. News are these:{}. My question is {}. If the news I give do not contain these information, you just say 'Unknown'. Please do not output any other content or explanations, just answer the question is OK.".format(news, question)
     completion = openai.ChatCompletion.create(
         model="gpt-3.5-turbo-0613",
         messages=[

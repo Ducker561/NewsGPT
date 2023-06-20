@@ -24,4 +24,3 @@ def get_top_news(q):
         results.append(ar["title"])
         results.append(ar["summary"])
     return results
-
